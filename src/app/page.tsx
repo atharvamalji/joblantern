@@ -29,7 +29,7 @@ const Page = () => {
                             Sign Up
                         </button>
                         <p className="text-xs text-center text-stone-600">
-                            We won't spam you with unecessary emails
+                            We won&apos;t spam you with unecessary emails
                         </p>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ const Page = () => {
                         platforms, saving you countless hours of manual
                         searching and refreshing. Our streamlined dashboard
                         brings the freshest job listings directly to you,
-                        ensuring you're always first in line for your dream
+                        ensuring you&apos;re always first in line for your dream
                         position.
                     </p>
                 </div>
@@ -57,7 +57,7 @@ const Page = () => {
                             Top Jobs for Various Roles
                         </h1>
                         <p>
-                            Have a look at some of the latest jobs we've just
+                            Have a look at some of the latest jobs we&apos;ve just
                             collected.
                         </p>
                     </div>

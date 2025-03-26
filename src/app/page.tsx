@@ -1,103 +1,313 @@
-import Image from "next/image";
-
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+const Page = () => {
+    return (
+        <div className="flex flex-col md:items-center">
+            <section className="w-full md:w-[100rem] p-4 md:p-32 py-16 flex flex-col items-center justify-center border-b border-stone-300">
+                <div className="space-y-8 flex flex-col items-center justify-center">
+                    <div className="bg-green-50 text-green-600 p-1 px-2 rounded-full border w-max">
+                        <p className="text-xs font-semibold">
+                            Now Tracking{" "}
+                            <span className="font-extrabold">100+</span>{" "}
+                            Companies
+                        </p>
+                    </div>
+                    <h1 className="text-4xl md:text-7xl text-center">
+                        Apply to Jobs the{" "}
+                        <span className="font-bold text-green-500">Right</span>{" "}
+                        Way
+                    </h1>
+                    <p className="md:text-xl text-center">
+                        Stop wasting time searching on LinkedIn for stale jobs.
+                        Get notified as soon as relevent jobs are posted.
+                    </p>
+                    <div className="w-[18rem] md:w-[20rem] grid gap-4">
+                        <input
+                            type="email"
+                            className="p-2 md:p-4 border border-stone-300 bg-stone-50 rounded-lg"
+                            placeholder="john.dev@next job.com"
+                        />
+                        <button className="p-2 md:p-4 bg-green-500 font-semibold text-white rounded-lg">
+                            Sign Up
+                        </button>
+                        <p className="text-xs text-center text-stone-600">
+                            We won't spam you with unecessary emails
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full md:w-[100rem] p-4 md:p-32 py-8 flex flex-col justify-center border-b border-stone-300">
+                <div className="space-y-4">
+                    <h1 className="text-2xl md:text-4xl font-bold">
+                        Why use JobLantern
+                    </h1>
+                    <p>
+                        JobLantern transforms your job search by tracking new
+                        opportunities every 10 minutes across multiple
+                        platforms, saving you countless hours of manual
+                        searching and refreshing. Our streamlined dashboard
+                        brings the freshest job listings directly to you,
+                        ensuring you're always first in line for your dream
+                        position.
+                    </p>
+                </div>
+            </section>
+            <section className="w-full md:w-[100rem] p-4 md:p-32 py-8 flex flex-col justify-center border-b border-stone-300">
+                <div className="space-y-8">
+                    <div>
+                        <h1 className="text-2xl md:text-4xl font-bold">
+                            Top Jobs for Various Roles
+                        </h1>
+                        <p>
+                            Have a look at some of the latest jobs we've just
+                            collected.
+                        </p>
+                    </div>
+                    <div className="space-y-4">
+                        <div className="flex flex-wrap gap-2 text-sm">
+                            <button className="px-2 p-1 font-semibold bg-green-500 text-white">
+                                Software Developer
+                            </button>
+                            <button className="border px-2 p-1">
+                                Data Scientist
+                            </button>
+                            <button className="border px-2 p-1">
+                                Business Analyst
+                            </button>
+                            <button className="border px-2 p-1">
+                                Data Engineer
+                            </button>
+                        </div>
+                        <div>
+                            <div>
+                                <ul className="space-y-2">
+                                    <li>
+                                        <div className="border p-4 flex gap-4">
+                                            <div>
+                                                <img
+                                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQGZSoh-oc0ykg/company-logo_100_100/company-logo_100_100/0/1733769817883/sharkninja_logo?e=1748476800&v=beta&t=2wFcfDEBwpHoA5hpjMH52qVQzgv-ns2_7Gu3ffDg2R8"
+                                                    alt=""
+                                                    className="h-12 w-12 rounded-full"
+                                                />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p>Software Developer I</p>
+                                                <div className="flex justify-between text-sm">
+                                                    <p>Microsoft</p>
+                                                    <p>2 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="border p-4 flex gap-4">
+                                            <div>
+                                                <img
+                                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQGZSoh-oc0ykg/company-logo_100_100/company-logo_100_100/0/1733769817883/sharkninja_logo?e=1748476800&v=beta&t=2wFcfDEBwpHoA5hpjMH52qVQzgv-ns2_7Gu3ffDg2R8"
+                                                    alt=""
+                                                    className="h-12 w-12 rounded-full"
+                                                />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p>Software Developer I</p>
+                                                <div className="flex justify-between text-sm">
+                                                    <p>Microsoft</p>
+                                                    <p>2 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="border p-4 flex gap-4">
+                                            <div>
+                                                <img
+                                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQGZSoh-oc0ykg/company-logo_100_100/company-logo_100_100/0/1733769817883/sharkninja_logo?e=1748476800&v=beta&t=2wFcfDEBwpHoA5hpjMH52qVQzgv-ns2_7Gu3ffDg2R8"
+                                                    alt=""
+                                                    className="h-12 w-12 rounded-full"
+                                                />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p>Software Developer I</p>
+                                                <div className="flex justify-between text-sm">
+                                                    <p>Microsoft</p>
+                                                    <p>2 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="border p-4 flex gap-4">
+                                            <div>
+                                                <img
+                                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQGZSoh-oc0ykg/company-logo_100_100/company-logo_100_100/0/1733769817883/sharkninja_logo?e=1748476800&v=beta&t=2wFcfDEBwpHoA5hpjMH52qVQzgv-ns2_7Gu3ffDg2R8"
+                                                    alt=""
+                                                    className="h-12 w-12 rounded-full"
+                                                />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p>Software Developer I</p>
+                                                <div className="flex justify-between text-sm">
+                                                    <p>Microsoft</p>
+                                                    <p>2 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className="border p-4 flex gap-4">
+                                            <div>
+                                                <img
+                                                    src="https://media.licdn.com/dms/image/v2/D4E0BAQGZSoh-oc0ykg/company-logo_100_100/company-logo_100_100/0/1733769817883/sharkninja_logo?e=1748476800&v=beta&t=2wFcfDEBwpHoA5hpjMH52qVQzgv-ns2_7Gu3ffDg2R8"
+                                                    alt=""
+                                                    className="h-12 w-12 rounded-full"
+                                                />
+                                            </div>
+                                            <div className="flex-1">
+                                                <p>Software Developer I</p>
+                                                <div className="flex justify-between text-sm">
+                                                    <p>Microsoft</p>
+                                                    <p>2 hours ago</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="w-full md:w-[100rem] p-4 md:p-32 py-8 flex flex-col justify-center border-b border-stone-300">
+                <div className="space-y-8">
+                    <div>
+                        <h1 className="text-2xl md:text-4xl font-bold">
+                            Pricing
+                        </h1>
+                        <p>
+                            We have pricing plans to suit all budgets. Choose
+                            the right plan for you.
+                        </p>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4">
+                        <div className="flex flex-col border p-4 space-y-4 rounded-lg border-stone-300 bg-stone-50">
+                            <div className="text-center space-y-2">
+                                <p className="text-4xl font-bold">$0</p>
+                                <p>Free Forever</p>
+                            </div>
+                            <hr />
+                            <div className="flex-1 flex flex-col justify-between space-y-4">
+                                <div>
+                                    <ul className="space-y-1">
+                                        <li>
+                                            <span className="text-green-500">
+                                                ✓
+                                            </span>{" "}
+                                            Updates every 1 hour
+                                        </li>
+                                        <li>
+                                            <span className="text-green-500">
+                                                ✓
+                                            </span>{" "}
+                                            Search for upto 1 job role
+                                        </li>
+                                        <li>
+                                            <span className="text-green-500">
+                                                ✓
+                                            </span>{" "}
+                                            Upto 10 job openings every hour
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <button className="bg-green-500 text-white p-2 w-full rounded-lg">
+                                        Sign Up for Free
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col border p-4 space-y-4 rounded-lg border-stone-300 bg-stone-50">
+                            <div className="text-center space-y-2">
+                                <p className="text-4xl font-bold">$2.99</p>
+                                <p>Most Popular</p>
+                            </div>
+                            <hr />
+                            <div className="flex-1 flex flex-col justify-between space-y-4">
+                                <ul>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Updates every 10 min
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Search for upto 5 job roles
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Upto 10 job openings every 10 min
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button className="bg-green-500 text-white p-2 w-full rounded-lg">
+                                    Buy
+                                </button>
+                            </div>
+                        </div>
+                        <div className="flex flex-col border p-4 space-y-4 rounded-lg border-stone-300 bg-stone-50">
+                            <div className="text-center space-y-2">
+                                <p className="text-4xl font-bold">$5.99</p>
+                                <p>Ultimate Plan</p>
+                            </div>
+                            <hr />
+                            <div className="flex-1 flex flex-col justify-between space-y-4">
+                                <ul>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Updates every 10 min
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Search for upto 10 job roles
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Upto 100 job openings every 10 min
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Match your resume with job listings
+                                    </li>
+                                    <li>
+                                        <span className="text-green-500">
+                                            ✓
+                                        </span>{" "}
+                                        Track job applications
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <button className="bg-green-500 text-white p-2 w-full rounded-lg">
+                                    Buy
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
-}
+    );
+};
+
+export default Page;
